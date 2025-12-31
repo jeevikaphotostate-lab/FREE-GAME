@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Game Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: rgba(0,0,0,0.4);
+    }
+    h1 { margin: 0; }
+    .game-box {
+      margin: 40px auto;
+      width: 300px;
+      padding: 20px;
+      background: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    .score {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #00c6ff;
+      color: #000;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #00ffcc;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎮 My Game Website</h1>
+  <p>Simple Click Game</p>
+</header>
+
+<div class="game-box">
+  <div class="score">Score: <span id="score">0</span></div>
+  <button onclick="increaseScore()">CLICK ME</button>
+</div>
+
+<footer>
+  © 2025 My Game Site | Made by You
+</footer>
+
+<script>
+  let score = 0;
+  function increaseScore() {
+    score++;
+    document.getElementById('score').innerText = score;
+  }
+</script>
+
+</body>
+</html>
